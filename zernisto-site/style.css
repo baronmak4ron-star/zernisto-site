@@ -1,0 +1,1019 @@
+/* ==========================================================================
+   1. Переменные и базовые настройки (Палитра кофейни «Зернисто»)
+   ========================================================================== */
+:root {
+    --bg-primary: #FAF7F2;        /* Тёплый молочный / сливочный фон */
+    --bg-secondary: #F2ECE1;      /* Лёгкий бежевый фон для чередования секций */
+    --bg-card: #FFFFFF;           /* Чистый белый для карточек */
+    
+    --text-primary: #241914;      /* Глубокий тёмный эспрессо */
+    --text-secondary: #68584F;    /* Мягкий кофейно-серый для описаний */
+    --text-light: #FAF7F2;        /* Светлый текст на тёмном фоне */
+    
+    --accent-primary: #C47A3E;    /* Тёплая карамель / обжаренное зерно */
+    --accent-hover: #A6622B;      /* Глубокая карамель при наведении */
+    --accent-soft: rgba(196, 122, 62, 0.12);
+    
+    --border-color: #E6DDD0;
+    --shadow-sm: 0 4px 20px rgba(36, 25, 20, 0.05);
+    --shadow-md: 0 12px 35px rgba(36, 25, 20, 0.09);
+    
+    --radius-sm: 12px;
+    --radius-md: 20px;
+    --radius-lg: 28px;
+    
+    --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 96px 0;
+}
+
+.section--alt {
+    background-color: var(--bg-secondary);
+}
+
+/* ==========================================================================
+   2. Типографика и общие элементы (Заголовки, теги, кнопки)
+   ========================================================================== */
+.section-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 56px;
+}
+
+.section-tag {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-primary);
+    background-color: var(--accent-soft);
+    padding: 6px 14px;
+    border-radius: 50px;
+    margin-bottom: 14px;
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 4vw, 3.1rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+}
+
+.text-accent {
+    color: var(--accent-primary);
+    font-style: italic;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn--primary {
+    background-color: var(--accent-primary);
+    color: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(196, 122, 62, 0.28);
+}
+
+.btn--primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.btn--outline {
+    background-color: transparent;
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+.btn--outline:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.btn--small {
+    padding: 10px 20px;
+    font-size: 0.88rem;
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.btn--small:hover {
+    background-color: var(--accent-primary);
+    color: #FFFFFF;
+}
+
+/* ==========================================================================
+   3. Шапка сайта (Header)
+   ========================================================================== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(250, 247, 242, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px 0;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo__title {
+    font-family: var(--font-serif);
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text-primary);
+}
+
+.logo__subtitle {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent-primary);
+    margin-top: 3px;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav__link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-primary);
+    transition: var(--transition);
+}
+
+.nav__link:hover {
+    color: var(--accent-primary);
+}
+
+.nav__link:hover::after {
+    width: 100%;
+}
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.header__phone {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--text-primary);
+}
+
+.header__phone:hover {
+    color: var(--accent-primary);
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.burger span {
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+/* ==========================================================================
+   4. Первый экран (Hero Section)
+   ========================================================================== */
+.hero {
+    padding: 64px 0 96px;
+}
+
+.hero__container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.hero__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.badge {
+    font-size: 0.84rem;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 50px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.badge--accent {
+    background-color: var(--accent-soft);
+    border-color: transparent;
+    color: var(--accent-primary);
+}
+
+.hero__title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.6rem, 5vw, 4.1rem);
+    font-weight: 700;
+    line-height: 1.08;
+    margin-bottom: 22px;
+}
+
+.hero__description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 560px;
+    margin-bottom: 34px;
+}
+
+.hero__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 44px;
+}
+
+.hero__features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border-color);
+}
+
+.feature-mini {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.hero__image-wrapper {
+    position: relative;
+}
+
+.hero__image {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.hero__floating-card {
+    position: absolute;
+    bottom: -24px;
+    left: -28px;
+    max-width: 290px;
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.rating-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.rating-box__star {
+    background-color: #2E7D32;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 3px 9px;
+    border-radius: 8px;
+}
+
+.rating-box__text {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.hero__floating-quote {
+    font-size: 0.88rem;
+    font-style: italic;
+    color: var(--text-primary);
+    line-height: 1.45;
+}
+
+/* ==========================================================================
+   5. Блок О кофейне (About Section)
+   ========================================================================== */
+.about__container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 64px;
+}
+
+.about__media {
+    position: relative;
+}
+
+.about__img-main img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.about__experience-badge {
+    position: absolute;
+    top: 28px;
+    right: -24px;
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.about__exp-number {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.about__exp-text {
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.about__text {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 18px;
+}
+
+.about__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border-color);
+}
+
+.stat-item__value {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.stat-item__label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.35;
+}
+
+/* ==========================================================================
+   6. Блок Меню (Menu Section)
+   ========================================================================== */
+.menu__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 44px;
+}
+
+.menu__tab {
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 11px 22px;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.menu__tab:hover {
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+}
+
+.menu__tab.active {
+    background-color: var(--text-primary);
+    border-color: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.menu__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 26px;
+}
+
+.menu-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.menu-card.hidden {
+    display: none;
+}
+
+.menu-card__image-box {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background-color: var(--bg-secondary);
+}
+
+.menu-card__image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-card__image-box img {
+    transform: scale(1.05);
+}
+
+.menu-card__badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background-color: var(--accent-primary);
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 5px 12px;
+    border-radius: 50px;
+}
+
+.menu-card__body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.menu-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.menu-card__title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.menu-card__price {
+    font-weight: 700;
+    font-size: 1.08rem;
+    color: var(--accent-primary);
+    white-space: nowrap;
+}
+
+.menu-card__desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.menu-card__meta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding-top: 12px;
+    border-top: 1px dashed var(--border-color);
+}
+
+.menu__footer {
+    text-align: center;
+    margin-top: 36px;
+}
+
+.menu__note {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   7. Блок Атмосфера (Bento Grid)
+   ========================================================================== */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+.bento-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    min-height: 360px;
+    box-shadow: var(--shadow-sm);
+    grid-column: span 6;
+}
+
+.bento-card--large {
+    grid-column: span 12;
+    min-height: 420px;
+}
+
+.bento-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bento-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(36, 25, 20, 0.88) 0%, rgba(36, 25, 20, 0.25) 55%, transparent 100%);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #FFFFFF;
+}
+
+.bento-card__overlay h3 {
+    font-family: var(--font-serif);
+    font-size: 1.85rem;
+    margin-bottom: 8px;
+}
+
+.bento-card__overlay p {
+    font-size: 0.96rem;
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 580px;
+}
+
+.bento-card--info {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    padding: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.amenities-list h3 {
+    font-family: var(--font-serif);
+    font-size: 1.9rem;
+    color: var(--accent-primary);
+    margin-bottom: 20px;
+}
+
+.amenities-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.amenities-list li {
+    font-size: 0.96rem;
+    line-height: 1.45;
+}
+
+/* ==========================================================================
+   8. Блок Отзывы гостей (Reviews Section)
+   ========================================================================== */
+.reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 44px;
+}
+
+.review-card {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.review-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.review-card__name {
+    display: block;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+}
+
+.review-card__role {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+.review-card__stars {
+    color: #E59819;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+}
+
+.review-card__text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+.reviews__footer {
+    text-align: center;
+}
+
+/* ==========================================================================
+   9. Блок Где мы / Контакты и Карта (Contacts Section)
+   ========================================================================== */
+.contacts__container {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 48px;
+    align-items: stretch;
+}
+
+.contacts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 32px 0 36px;
+}
+
+.contact-item__label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-primary);
+    margin-bottom: 6px;
+}
+
+.contact-item__value {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.contact-item__hint {
+    display: block;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.contact-item__link {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.contact-item__link:hover {
+    color: var(--accent-primary);
+}
+
+.contacts__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.contacts__map {
+    min-height: 440px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================================
+   10. Футер (Footer)
+   ========================================================================== */
+.footer {
+    background-color: var(--text-primary);
+    color: var(--text-light);
+    padding-top: 72px;
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 1fr;
+    gap: 48px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid rgba(250, 247, 242, 0.12);
+}
+
+.footer .logo__title {
+    color: #FFFFFF;
+}
+
+.footer__desc {
+    margin-top: 16px;
+    font-size: 0.92rem;
+    color: rgba(250, 247, 242, 0.72);
+    max-width: 340px;
+}
+
+.footer__heading {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-primary);
+    margin-bottom: 18px;
+}
+
+.footer__nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__nav a {
+    font-size: 0.92rem;
+    color: rgba(250, 247, 242, 0.8);
+}
+
+.footer__nav a:hover {
+    color: var(--accent-primary);
+}
+
+.footer__small {
+    font-size: 0.9rem;
+    color: rgba(250, 247, 242, 0.72);
+    margin-bottom: 12px;
+}
+
+.footer__link {
+    display: inline-block;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__bottom {
+    padding: 22px 0;
+    font-size: 0.84rem;
+    color: rgba(250, 247, 242, 0.55);
+}
+
+.footer__bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* ==========================================================================
+   11. Адаптив под планшеты и смартфоны (Responsive)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .hero__container,
+    .about__container,
+    .contacts__container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero {
+        padding: 40px 0 72px;
+    }
+
+    .hero__image {
+        height: 400px;
+    }
+
+    .hero__floating-card {
+        left: 16px;
+        bottom: 16px;
+    }
+
+    .about__experience-badge {
+        right: 16px;
+        top: 16px;
+    }
+
+    .bento-card {
+        grid-column: span 12;
+        min-height: 300px;
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 68px 0;
+    }
+
+    .header__phone {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .nav {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-primary);
+        border-bottom: 1px solid var(--border-color);
+        padding: 28px 20px;
+        transform: translateY(-130%);
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--transition);
+        box-shadow: var(--shadow-md);
+    }
+
+    .nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .nav__link {
+        font-size: 1.1rem;
+    }
+
+    .about__stats {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}

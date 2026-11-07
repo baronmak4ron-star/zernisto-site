@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Базовое SEO под Лазаревское и Сочи -->
+    <title>Кофейня Зернисто (Zernisto) в Лазаревском — авторский кофе, десерты, уют</title>
+    <meta name="description" content="Кофейня Зернисто в Лазаревском (Сочи, ул. Победы, 90). Свежая обжарка 100% арабики, васильковый латте, кофе гляссе, нежные торты. Дог-френдли, Wi-Fi, столики на улице.">
+    <meta name="keywords" content="кофейня лазаревское, зернисто лазаревское, zernisto сочи, кофе с собой лазаревское, кофейня победа 90 лазаревское, вкусный кофе сочи, васильковый латте">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zernisto-lazarevskoe.ru">
+
+    <!-- OpenGraph для красивых ссылок в Telegram / WhatsApp / ВК -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Кофейня Зернисто в Лазаревском — кофе с душой и свежей обжаркой">
+    <meta property="og:description" content="Заходи за лучшим кофе в Лазаревском: ул. Победы, 90. Фирменный васильковый латте, десерты и уютная терраса. Можно с собаками!">
+    <meta property="og:url" content="https://zernisto-lazarevskoe.ru">
+    <meta property="og:image" content="images/og-preview.jpg">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Гео-метатеги для локального поиска -->
+    <meta name="geo.region" content="RU-KDA">
+    <meta name="geo.placename" content="Сочи, Лазаревское">
+    <meta name="geo.position" content="43.914188;39.326141">
+    <meta name="ICBM" content="43.914188, 39.326141">
+
+    <!-- Подключение современных шрифтов Google Fonts (Manrope + Cormorant Garamond для премиального акцента) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Подключение нашего будущего файла стилей -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Микроразметка Schema.org (LocalBusiness / CafeOrCoffeeShop) для топа в Google и Яндексе -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Кофейня Зернисто (Zernisto)",
+      "image": "https://zernisto-lazarevskoe.ruimages/hero-coffee.jpg",
+      "@id": "https://zernisto-lazarevskoe.ru",
+      "url": "https://zernisto-lazarevskoe.ru",
+      "telephone": "+79384588299",
+      "priceRange": "₽₽",
+      "servesCoffee": true,
+      "acceptsReservations": "False",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Победы, 90",
+        "addressLocality": "Лазаревское, Сочи",
+        "addressRegion": "Краснодарский край",
+        "postalCode": "354200",
+        "addressCountry": "RU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.914188,
+        "longitude": 39.326141
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "21:00"
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Dog friendly (до 35 см)", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Оплата картой и по QR", "value": true }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.4",
+        "reviewCount": "11"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Шапка сайта (Header) -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="logo" aria-label="Зернисто Лазаревское — На главную">
+                <span class="logo__title">ЗЕРНИСТО</span>
+                <span class="logo__subtitle">Лазаревское</span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">О кофейне</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link">Меню</a></li>
+                    <li class="nav__item"><a href="#atmosphere" class="nav__link">Атмосфера</a></li>
+                    <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
+                    <li class="nav__item"><a href="#contacts" class="nav__link">Где мы</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a href="tel:+79384588299" class="header__phone">+7 (938) 458-82-99</a>
+                <a href="#contacts" class="btn btn--small">Маршрут</a>
+                <button class="burger" id="burger" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Первый экран (Hero Section) -->
+        <section class="hero" id="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <div class="hero__badges">
+                        <span class="badge">📍 ул. Победы, 90 (возле школы №75)</span>
+                        <span class="badge badge--accent">🕒 Открыто до 21:00</span>
+                    </div>
+                    
+                    <h1 class="hero__title">
+                        Твоя кофейня с душой и свежей обжаркой в <span class="text-accent">Лазаревском</span>
+                    </h1>
+                    
+                    <p class="hero__description">
+                        Варим 100% арабику Бразилия Сантос с любовью к каждой детали. Попробуй наш фирменный васильковый латте, освежающий кофе гляссе и нежнейший фисташковый торт.
+                    </p>
+
+                    <div class="hero__buttons">
+                        <a href="#menu" class="btn btn--primary">Посмотреть меню</a>
+                        <a href="https://yandex.ru/maps/org/zernisto/164237399879/?ll=39.326141%2C43.914188&z=15" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                            Построить маршрут
+                        </a>
+                    </div>
+
+                    <div class="hero__features">
+                        <div class="feature-mini">
+                            <span class="feature-mini__icon">☕</span>
+                            <span>Капучино от 229 ₽</span>
+                        </div>
+                        <div class="feature-mini">
+                            <span class="feature-mini__icon">🐕</span>
+                            <span>Можно с собачками</span>
+                        </div>
+                        <div class="feature-mini">
+                            <span class="feature-mini__icon">🌿</span>
+                            <span>Уютные столики на улице</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__visual">
+                    <div class="hero__image-wrapper">
+                        <img src="images/hero-coffee.jpg" alt="Фирменный кофе и десерты в кофейне Зернисто Лазаревское" class="hero__image" loading="eager">
+                        <div class="hero__floating-card">
+                            <div class="rating-box">
+                                <span class="rating-box__star">★ 4.4</span>
+                                <span class="rating-box__text">на Яндекс.Картах</span>
+                            </div>
+                            <p class="hero__floating-quote">«Готовят сразу после заказа, вкус нежный и натуральный»</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок О кофейне (About Section) -->
+        <section class="about section" id="about">
+            <div class="container about__container">
+                <div class="about__media">
+                    <div class="about__img-main">
+                        <img src="images/about-barista.jpg" alt="Бариста кофейни Зернисто в Лазаревском готовит кофе" loading="lazy">
+                    </div>
+                    <div class="about__experience-badge">
+                        <span class="about__exp-number">100%</span>
+                        <span class="about__exp-text">Арабика<br>Бразилия Сантос</span>
+                    </div>
+                </div>
+
+                <div class="about__content">
+                    <span class="section-tag">О кофейне</span>
+                    <h2 class="section-title">Место, где кофе — это повод замедлиться</h2>
+                    <p class="about__text">
+                        «Зернисто» в Лазаревском — это уютная кофейня с продуманным интерьером, спокойной фоновой музыкой и искренним сервисом. Мы сами обжариваем отборную 100% арабику Бразилия Сантос и используем качественное молоко, чтобы вкус каждой чашки был стабильным и насыщенным.
+                    </p>
+                    <p class="about__text">
+                        Не знаете, что выбрать? Наши бариста подскажут напиток под ваше настроение, предложат большой выбор сиропов и приготовят заказ сразу при вас — без долгого ожидания.
+                    </p>
+
+                    <div class="about__stats">
+                        <div class="stat-item">
+                            <span class="stat-item__value">0 мин</span>
+                            <span class="stat-item__label">ожидания — варим сразу после заказа</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-item__value">Натурально</span>
+                            <span class="stat-item__label">десерты без приторной сладости</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-item__value">До 21:00</span>
+                            <span class="stat-item__label">работаем каждый день без выходных</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок Меню (Menu Section) -->
+        <section class="menu section section--alt" id="menu">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Наше меню</span>
+                    <h2 class="section-title">Кофе, за которым возвращаются</h2>
+                    <p class="section-subtitle">Готовим классику, авторские напитки и подаём свежие десерты с натуральным составом</p>
+                </div>
+
+                <!-- Табы фильтрации меню -->
+                <div class="menu__tabs" role="tablist">
+                    <button class="menu__tab active" data-category="all" role="tab" aria-selected="true">Всё меню</button>
+                    <button class="menu__tab" data-category="signature" role="tab" aria-selected="false">Авторское и холодное</button>
+                    <button class="menu__tab" data-category="classic" role="tab" aria-selected="false">Классика и какао</button>
+                    <button class="menu__tab" data-category="desserts" role="tab" aria-selected="false">Торты и десерты</button>
+                </div>
+
+                <!-- Сетка позиций меню -->
+                <div class="menu__grid" id="menuGrid">
+                    <!-- Позиция 1 -->
+                    <article class="menu-card" data-category="signature">
+                        <div class="menu-card__image-box">
+                            <img src="images/menu-cornflower-latte.jpg" alt="Васильковый латте в кофейне Зернисто" loading="lazy">
+                            <span class="menu-card__badge">Хит гостей</span>
+                        </div>
+                        <div class="menu-card__body">
+                            <div class="menu-card__top">
+                                <h3 class="menu-card__title">Васильковый латте</h3>
+                                <span class="menu-card__price">269 ₽</span>
+                            </div>
+                            <p class="menu-card__desc">Эксклюзивный нежный латте на эспрессо из 100% арабики с тонким цветочным ароматом.</p>
+                            <span class="menu-card__meta">300 мл · Можно на альтернативном молоке</span>
+                        </div>
+                    </article>
+
+                    <!-- Позиция 2 -->
+                    <article class="menu-card" data-category="signature">
+                        <div class="menu-card__image-box">
+                            <img src="images/menu-glace.jpg" alt="Кофе гляссе с мороженым в Зернисто" loading="lazy">
+                            <span class="menu-card__badge">Выбор лета</span>
+                        </div>
+                        <div class="menu-card__body">
+                            <div class="menu-card__top">
+                                <h3 class="menu-card__title">Кофе гляссе</h3>
+                                <span class="menu-card__price">259 ₽</span>
+                            </div>
+                            <p class="menu-card__desc">Насыщенный кофе с шариком нежного сливочного мороженого и эффектной подачей.</p>
+                            <span class="menu-card__meta">300 мл · Освежающий</span>
+                        </div>
+                    </article>
+
+                    <!-- Позиция 3 -->
+                    <article class="menu-card" data-category="classic">
+                        <div class="menu-card__image-box">
+                            <img src="images/menu-cappuccino.jpg" alt="Классический капучино в Зернисто Лазаревское" loading="lazy">
+                        </div>
+                        <div class="menu-card__body">
+                            <div class="menu-card__top">
+                                <h3 class="menu-card__title">Капучино</h3>
+                                <span class="menu-card__price">от 229 ₽</span>
+                            </div>
+                            <p class="menu-card__desc">Идеальный баланс плотного эспрессо Бразилия Сантос и шелковистой молочной пенки.</p>
+                            <span class="menu-card__meta">200 / 300 / 400 мл · Большой выбор сиропов</span>
+                        </div>
+                    </article>
+
+                    <!-- Позиция 4 -->
+                    <article class="menu-card" data-category="classic">
+                        <div class="menu-card__image-box">
+                            <img src="images/menu-cocoa.jpg" alt="Сваренный какао в кофейне Зернисто" loading="lazy">
+                        </div>
+                        <div class="menu-card__body">
+                            <div class="menu-card__top">
+                                <h3 class="menu-card__title">Сваренный какао</h3>
+                                <span class="menu-card__price">239 ₽</span>
+                            </div>
+                            <p class="menu-card__desc">Настоящий густой какао, сваренный на молоке — согревает и дарит уют в любую погоду.</p>
+                            <span class="menu-card__meta">300 мл · Без кофеина</span>
+                        </div>
+                    </article>
+                    <!-- Позиция 5 -->
+                    <article class="menu-card" data-category="desserts">
+                        <div class="menu-card__image-box">
+                            <img src="images/menu-pistachio-cake.jpg" alt="Торт Фисташка в Зернисто" loading="lazy">
+                            <span class="menu-card__badge">Бестселлер</span>
+                        </div>
+                        <div class="menu-card__body">
+                            <div class="menu-card__top">
+                                <h3 class="menu-card__title">Торт «Фисташка»</h3>
+                                <span class="menu-card__price">280 ₽</span>
+                            </div>
+                            <p class="menu-card__desc">Нежный бисквит с натуральной фисташковой пастой и тающим сливочным кремом.</p>
+                            <span class="menu-card__meta">1 шт. · Не приторный</span>
+                        </div>
+                    </article>
+
+                    <!-- Позиция 6 -->
+                    <article class="menu-card" data-category="desserts">
+                        <div class="menu-card__image-box">
+                            <img src="images/menu-milk-slice.jpg" alt="Торт Молочный ломтик в Зернисто" loading="lazy">
+                        </div>
+                        <div class="menu-card__body">
+                            <div class="menu-card__top">
+                                <h3 class="menu-card__title">Торт «Молочный ломтик»</h3>
+                                <span class="menu-card__price">260 ₽</span>
+                            </div>
+                            <p class="menu-card__desc">Воздушный шоколадный бисквит с легким молочно-медовым суфле.</p>
+                            <span class="menu-card__meta">1 шт. · Свежая поставка</span>
+                        </div>
+                    </article>
+
+                    <!-- Позиция 7 -->
+                    <article class="menu-card" data-category="desserts">
+                        <div class="menu-card__image-box">
+                            <img src="images/menu-medovik.jpg" alt="Торт Медовик в Зернисто" loading="lazy">
+                        </div>
+                        <div class="menu-card__body">
+                            <div class="menu-card__top">
+                                <h3 class="menu-card__title">Торт «Медовик»</h3>
+                                <span class="menu-card__price">250 ₽</span>
+                            </div>
+                            <p class="menu-card__desc">Классические ароматные медовые коржи, пропитанные нежным сметанным кремом.</p>
+                            <span class="menu-card__meta">1 шт. · Классика</span>
+                        </div>
+                    </article>
+
+                    <!-- Позиция 8 -->
+                    <article class="menu-card" data-category="desserts">
+                        <div class="menu-card__image-box">
+                            <img src="images/menu-choco-cheesecake.jpg" alt="Шоколадный чизкейк в кофейне Зернисто" loading="lazy">
+                        </div>
+                        <div class="menu-card__body">
+                            <div class="menu-card__top">
+                                <h3 class="menu-card__title">Шоколадный чизкейк</h3>
+                                <span class="menu-card__price">270 ₽</span>
+                            </div>
+                            <p class="menu-card__desc">Сбалансированный творожно-шоколадный вкус с натуральными нотами какао.</p>
+                            <span class="menu-card__meta">1 шт. · Идеально к эспрессо</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="menu__footer">
+                    <p class="menu__note">* Актуальное наличие сезонных напитков, чая и десертов уточняйте на витрине у бариста</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок Атмосфера и удобства (Atmosphere Section) -->
+        <section class="atmosphere section" id="atmosphere">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Атмосфера</span>
+                    <h2 class="section-title">Комфортно внутри и уютно на свежем воздухе</h2>
+                    <p class="section-subtitle">Продумали всё, чтобы вы могли отдохнуть, поработать за ноутбуком или зайти на прогулке с питомцем</p>
+                </div>
+
+                <div class="bento-grid">
+                    <div class="bento-card bento-card--large">
+                        <img src="images/interior-main.jpg" alt="Интерьер кофейни Зернисто в Лазаревском" loading="lazy">
+                        <div class="bento-card__overlay">
+                            <h3>Спокойный интерьер без громкой музыки</h3>
+                            <p>Уютные посадочные места, розетки и зарядные станции, стабильный Wi-Fi и идеальная чистота.</p>
+                        </div>
+                    </div>
+
+                    <div class="bento-card">
+                        <img src="images/terrace-table.jpg" alt="Уличный столик возле кофейни Зернисто" loading="lazy">
+                        <div class="bento-card__overlay">
+                            <h3>Столики на улице</h3>
+                            <p>Насладитесь утренним кофе на свежем воздухе под южным солнцем.</p>
+                        </div>
+                    </div>
+
+                    <div class="bento-card bento-card--info">
+                        <div class="amenities-list">
+                            <h3>Забота о каждом госте</h3>
+                            <ul>
+                                <li>🐾 <strong>Dog-friendly:</strong> можно с собаками до 35 см</li>
+                                <li>♿ <strong>Доступная среда:</strong> полный доступ для колясок</li>
+                                <li>🔌 <strong>Зарядка и Wi-Fi:</strong> удобно поработать или отдохнуть</li>
+                                <li>💳 <strong>Любая оплата:</strong> карта, QR-код (СБП) или наличные</li>
+                                <li>🥤 <strong>Кофе с собой:</strong> быстрая выдача в удобных стаканчиках</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок Отзывы гостей (Reviews Section) -->
+        <section class="reviews section section--alt" id="reviews">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Отзывы гостей</span>
+                    <h2 class="section-title">Что говорят о нас в Лазаревском</h2>
+                    <p class="section-subtitle">Средняя оценка кофейни — 4.4 ★ на Яндекс.Картах</p>
+                </div>
+
+                <div class="reviews__grid">
+                    <!-- Отзыв 1 -->
+                    <article class="review-card">
+                        <div class="review-card__header">
+                            <div class="review-card__author">
+                                <span class="review-card__name">Елена Сура</span>
+                                <span class="review-card__role">Знаток города 6 уровня</span>
+                            </div>
+                            <span class="review-card__stars">★★★★★</span>
+                        </div>
+                        <p class="review-card__text">
+                            «Люблю качественный кофе с хорошими ингредиентами и я его нашла. Впервые попробовала здесь васильковый латте и была им покорена. Кофе гляссе — шедевр по подаче и вкусу! А десерты нежные, свежие и не приторно сладкие».
+                        </p>
+                    </article>
+
+                    <!-- Отзыв 2 -->
+                    <article class="review-card">
+                        <div class="review-card__header">
+                            <div class="review-card__author">
+                                <span class="review-card__name">SAMADHI MAZE</span>
+                                <span class="review-card__role">Знаток города 4 уровня</span>
+                            </div>
+                            <span class="review-card__stars">★★★★★</span>
+                        </div>
+                        <p class="review-card__text">
+                            «Приятная находка в Лазаревском! Уютная кофейня, нет громкой музыки, кофе гляссе очень вкусный, хороший выбор сиропов и приятный бариста. Особенно очаровательно сидеть за столиком на улице».
+                        </p>
+                    </article>
+
+                    <!-- Отзыв 3 -->
+                    <article class="review-card">
+                        <div class="review-card__header">
+                            <div class="review-card__author">
+                                <span class="review-card__name">Вероника</span>
+                                <span class="review-card__role">Знаток города 11 уровня</span>
+                            </div>
+                            <span class="review-card__stars">★★★★★</span>
+                        </div>
+                        <p class="review-card__text">
+                            «Небольшое уютное, чистое кафе с интересным интерьером. Вежливый, внимательный персонал, очень вкусный сваренный какао и нежные пирожные. Рекомендую к посещению!»
+                        </p>
+                    </article>
+                </div>
+
+                <div class="reviews__footer">
+                    <a href="https://yandex.ru/maps/org/zernisto/164237399879/reviews/" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                        Читать все отзывы на Яндекс.Картах
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Блок Где мы / Контакты (Contacts Section) -->
+        <section class="contacts section" id="contacts">
+            <div class="container contacts__container">
+                <div class="contacts__info">
+                    <span class="section-tag">Где нас найти</span>
+                    <h2 class="section-title">Ждём вас на чашку свежего кофе</h2>
+                    
+                    <div class="contacts__list">
+                        <div class="contact-item">
+                            <span class="contact-item__label">Адрес:</span>
+                            <p class="contact-item__value">г. Сочи, мкр. Лазаревское, ул. Победы, 90</p>
+                            <span class="contact-item__hint">Ориентир: 44 м от школы № 75, рядом с ж/д станцией «Лазаревская»</span>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-item__label">Время работы:</span>
+                            <p class="contact-item__value">Ежедневно с 08:00 до 21:00</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-item__label">Телефон:</span>
+                            <a href="tel:+79384588299" class="contact-item__link">+7 (938) 458-82-99</a>
+                        </div>
+                    </div>
+
+                    <div class="contacts__buttons">
+                        <a href="https://yandex.ru/maps/org/zernisto/164237399879/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                            Открыть в Яндекс.Картах
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                            Наш Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Интерактивная Яндекс.Карта -->
+                <div class="contacts__map">
+                    <iframe 
+                        src="https://yandex.ru/maps/org/zernisto/164237399879" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        allowfullscreen="true" 
+                        title="Карта проезда к кофейне Зернисто на ул. Победы, 90 в Лазаревском"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер сайта (Footer) -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <span class="logo__title">ЗЕРНИСТО</span>
+                <p class="footer__desc">Уютная кофейня в Лазаревском. Свежая обжарка 100% арабики, авторские напитки и свежие десерты каждый день.</p>
+            </div>
+
+            <div class="footer__nav">
+                <h4 class="footer__heading">Навигация</h4>
+                <ul>
+                    <li><a href="#about">О кофейне</a></li>
+                    <li><a href="#menu">Меню и цены</a></li>
+                    <li><a href="#atmosphere">Атмосфера</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__franchise">
+                <h4 class="footer__heading">О бренде</h4>
+                <p class="footer__small">Кофейня входит в федеральную сеть «Зернисто».</p>
+                <a href="https://zernisto.ru" target="_blank" rel="noopener noreferrer" class="footer__link">Сайт франшизы zernisto.ru →</a>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container footer__bottom-container">
+                <p>© 2026 Кофейня «Зернисто» Лазаревское. Все права защищены.</p>
+                <p>г. Сочи, ул. Победы, 90</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение скриптов -->
+    <script src="script.js"></script>
+</body>
+</html>
